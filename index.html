@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <h1>Your Name</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center">
-    <h1 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-indigo-400">Your Name</span></h1>
-    <p class="text-xl text-gray-300 mb-6">A Software Developer passionate about modern web technologies</p>
-    <a href="#projects" class="bg-indigo-500 px-6 py-3 rounded-full text-white hover:bg-indigo-600 transition">View My Work</a>
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <h2>Hello, I'm <span>Your Name</span></h2>
+    <p>Aspiring Software Engineer | Tech Enthusiast</p>
+    <a href="#projects" class="btn">View My Work</a>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-indigo-400">About Me</h2>
-    <p class="text-gray-300">Write a short paragraph about who you are, your skills, and what drives you.</p>
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I enjoy building software solutions, learning new technologies, and solving problems.
+      Skilled in JavaScript, Python, and databases.
+    </p>
+    <a href="assets/resume.pdf" class="btn" target="_blank">Download Resume</a>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gray-800 px-6">
-    <h2 class="text-3xl font-bold mb-6 text-indigo-400 text-center">Projects</h2>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Project Card -->
-      <div class="bg-gray-700 rounded-xl shadow-lg p-6 hover:scale-105 transform transition">
-        <h3 class="text-xl font-semibold mb-2">Project Title</h3>
-        <p class="text-gray-300 mb-4">Short description of your project.</p>
-        <a href="#" class="text-indigo-400 hover:underline">View on GitHub</a>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Student Management System</h3>
+        <p>Web app with SQLite and Node.js for student performance evaluation.</p>
+      </div>
+      <div class="card">
+        <h3>Pong AI</h3>
+        <p>Implemented a DQN using PyTorch to train an agent to play Pong.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6 text-indigo-400">Get in Touch</h2>
-    <p class="text-gray-300 mb-4">Feel free to reach out for collaborations or opportunities.</p>
-    <a href="mailto:youremail@example.com" class="bg-indigo-500 px-6 py-3 rounded-full hover:bg-indigo-600 transition">Say Hello</a>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="socials">
+      <a href="mailto:your.email@example.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-6 text-center text-gray-500 text-sm">
-    © 2025 Your Name. Built with ♥
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Your Name</p>
   </footer>
-
 </body>
 </html>
