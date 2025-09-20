@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
+/* NAVBAR */
 header {
   background: #111;
   padding: 1rem 2rem;
@@ -29,6 +29,7 @@ nav h1 {
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 nav ul li {
   margin-left: 20px;
@@ -38,16 +39,16 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* Hero Section */
+/* HERO */
 #hero {
   height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background: linear-gradient(135deg, #6C63FF, #48C9B0);
   color: white;
-  text-align: center;
 }
 #hero h2 {
   font-size: 2.5rem;
@@ -58,27 +59,171 @@ nav ul li a {
   background: #fff;
   color: #111;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 25px;
   font-weight: 600;
+  transition: 0.3s;
+}
+#hero .btn:hover {
+  background: #eee;
 }
 
-/* Sections */
+/* SECTIONS */
 section {
   padding: 3rem 2rem;
 }
-#projects .grid {
+
+/* ABOUT BUTTON */
+#about .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #6C63FF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+#about .btn:hover {
+  background: #5548d8;
+}
+
+/* GRID CARDS */
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+  margin-top: 1rem;
 }
 .card {
-  background: white;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Footer */
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill {
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .skill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  /* Color per group */
+  .skill.lang { background: #6C63FF; }        /* Programming Languages */
+  .skill.framework { background: #FF6F61; }  /* Frameworks & Libraries */
+  .skill.db { background: #4CAF50; }         /* Databases */
+  .skill.devops { background: #F7B32B; }     /* DevOps & Tools */
+  
+  /* Section headers */
+  #skills h4 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 20px;
+    border-left: 3px solid #6C63FF;
+  }
+  
+  .timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: #6C63FF;
+    border-radius: 50%;
+  }
+  
+  .timeline-item h3 {
+    margin: 0.3rem 0;
+    color: #333;
+  }
+  
+  .timeline-item span {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .job-description {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
+  
+  .job-description li {
+    margin-bottom: 0.3rem;
+  }
+
+/* CERTIFICATIONS */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.cert-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.cert-card img {
+  max-width: 80%;
+  margin-bottom: 0.5rem;
+}
+
+/* CONTACT */
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.socials a {
+  font-size: 1.8rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.socials a:hover {
+  color: #6C63FF;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 1rem;
@@ -86,35 +231,118 @@ footer {
   color: #fff;
 }
 
-/* Resume button (reuse hero button style) */
-#about .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #6C63FF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: background 0.3s ease;
-  }
-  #about .btn:hover {
-    background: #5548d8;
+.cert-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Keep text color */
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   
-  /* Social icons */
-  .socials {
-    margin-top: 1rem;
+  .cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .cert-card p {
     display: flex;
-    gap: 20px;
+    align-items: center;
     justify-content: center;
+    gap: 8px; /* space between icon and text */
+    font-weight: 600;
   }
-  .socials a {
-    font-size: 1.8rem;
-    color: #333;
-    transition: color 0.3s ease;
+  
+  .cert-card p i {
+    color: #6C63FF; /* icon color */
   }
-  .socials a:hover {
+
+/* Education Section */
+.education-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .education-card span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .education-card h4 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
     color: #6C63FF;
   }
   
+  .awards-list {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+  }
+  
+  .awards-list li {
+    margin-bottom: 0.5rem;
+  }
+
+/* Teaching Assistant list */
+.ta-list {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+  }
+  
+  .ta-list li {
+    margin-bottom: 0.5rem;
+  }
+
+/* Education details below year */
+.edu-details {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .edu-details p {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  
+  /* Reuse education card styling */
+  .education-card h4 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #6C63FF;
+  }
+
+  .contact-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+  }
+  
+  .contact-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #6C63FF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .contact-badge:hover {
+    background: #5548d8;
+    transform: translateY(-3px);
+  }
+
