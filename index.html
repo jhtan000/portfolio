@@ -46,20 +46,153 @@
     <a href="assets/resume.pdf" class="btn" target="_blank">Download Resume</a>
   </section>
 
-  <!-- PROJECTS SECTION -->
+  <!-- PROJECT SECTION -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
+    <div class="projects-grid">
+  
+      <!-- Project 1 Card -->
+      <div class="project-card">
+        <img src="assets/Twinsies poster.jpg" alt="Project 1">
         <h3>Capstone Project: Twinsies</h3>
-        <p>a</p>
+        <div class="card-description">
+          <p>Developed Gen-AI powered digital twin for personalized learning, providing performance summary and learning recommendations tailored to each student in an instant.</p>
+        </div>
+        <button class="learn-more-btn" data-project="project1">Learn More</button>
       </div>
-      <div class="card">
-        <h3>a</h3>
-        <p>a</p>
+  
+      <!-- Project 2 Card -->
+      <div class="project-card">
+        <img src="assets/Petal.png" alt="Project 2">
+        <h3>Ellipsis Tech Series Hackathon 2024: Petal</h3>
+        <div class="card-description">
+          <p>Awarded Most Creative for developing Petal, an AI-powered mobile app for smart waste classification, featuring contextual recommendations and a Singapore NEA Recycling FAQs chatbot.</p>
+        </div>
+        <button class="learn-more-btn" data-project="project2">Learn More</button>
+      </div>
+  
+      <!-- Project 3 Card -->
+      <div class="project-card">
+        <img src="assets/AWS project.png" alt="Project 3">
+        <h3>Ascenda Admin Portal on AWS</h3>
+        <div class="card-description">
+          <p>Built an administrative system providing authentication and access control, exposing data and actions from other backend systems, and logging critical user activities for audit and monitoring purposes.</p>
+        </div>
+        <button class="learn-more-btn" data-project="project3">Learn More</button>
+      </div>
+  
+      <!-- Project 4 Card -->
+      <div class="project-card">
+        <img src="assets/Unfairprice.jpg" alt="Project 4">
+        <h3>Unfairprice</h3>
+        <div class="card-description">
+          <p>Built a DevOps-integrated e-commerce web application that manage product listings, while enabling customers to seamlessly browse and purchase items.</p>
+        </div>
+        <button class="learn-more-btn" data-project="project4">Learn More</button>
       </div>
     </div>
-  </section>
+  
+    <!-- MODALS (hidden by default) -->
+  
+    <!-- Project 1 Modal -->
+    <div id="project1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="project-image">
+          <img src="assets/Twinsies poster.jpg" alt="Project 1">
+        </div>
+        <h3>Capstone Project: Twinsies</h3>
+    <!-- Project Type Badges -->
+        <div class="project-type-badges">
+          <span class="badge type-badge">Fullstack Dev</span>
+          <span class="badge type-badge">GenAI</span>
+        </div>
+        <div class="modal-description">
+          <p>As a fullstack developer, I designed and implemented a backend microservice using Express.js to manage student course enrolments with full CRUD functionality, and built ReactJS frontend pages seamlessly integrated with the backend via RESTful APIs. I also facilitated sprint planning and managed the technical backlog on Jira to ensure consistent team velocity. For my microservice, I integrated the OpenAI API to deliver personalized recommendations, feedback, and summary evaluations for students, applying prompt engineering techniques to enhance the accuracy and relevance of AI-generated responses. The web application was containerised with Docker and I established a CI/CD pipeline for automated deployment, along with extensive testing using Mocha and Chai to ensure reliability and performance.</p>
+        </div>
+        <div class="badges">
+          <span class="badge">Javascript</span>
+          <span class="badge">ExpressJS</span>
+          <span class="badge">ReactJS</span>
+          <span class="badge">SQLite</span>
+          <span class="badge">Docker</span>
+          <span class="badge">OpenAI</span>
+        </div>
+        <a href="https://www.youtube.com/watch?v=bazoeIyg1ls" target="_blank" class="btn">Watch Demo</a>
+      </div>
+    </div>
+  
+    <!-- Project 2 Modal -->
+    <div id="project2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="project-image">
+          <img src="assets/Petal.png" alt="Project 2">
+        </div>
+        <h3>Ellipsis Tech Series Hackathon 2024: Petal</h3>
+        <div class="project-type-badges">
+          <span class="badge type-badge">Frontend Dev</span>
+          <span class="badge type-badge">GenAI</span>
+        </div>
+        <div class="modal-description">
+          <p>Won the Most Creative Award at the hackathon for Petal, a mobile app that combines AI-driven waste classification, a Singapore NEA Recycling FAQs chatbot, personalized 3Rs guidance, and a rewards system with a local recycling centre locator. As a frontend developer, I designed and developed the frontend using React Native, and built backend endpoints to enable seamless integration between the frontend and backend.</p>
+        </div>
+        <div class="badges">
+          <span class="badge">React Native</span>
+          <span class="badge">Google Gemini</span>
+        </div>
+        <a href="https://www.youtube.com/watch?v=WxJZmMxkVxc" target="_blank" class="btn">Watch Demo</a>
+      </div>
+    </div>
+  
+    <!-- Project 3 Modal -->
+    <div id="project3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="project-image">
+          <img src="assets/AWS project.png" alt="Project 3">
+        </div>
+        <h3>Ascenda Admin Portal using AWS</h3>
+        <div class="project-type-badges">
+          <span class="badge type-badge">Backend Dev</span>
+          <span class="badge type-badge">AWS Cloud</span>
+        </div>
+        <div class="modal-description">
+          <p>Developed and deployed the Ascenda Admin Portal, a platform fully leveraging AWS services. Built a web application for user management with a strong focus on Role-Based Access Control. As a backend developer, I implemented a logging system microservice that tracks critical user actions using Python and several AWS services, such as AWS Lambda and AWS SQS, following SOLID principles for maintainability. Furthermore, I also utilized AWS Aurora as hot storage for fast retrieval of recent and frequently accessed logs, and S3 as cold storage for older, less frequently accessed logs.</p>
+        </div>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">AWS</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Project 4 Modal -->
+    <div id="project4" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="project-image">
+          <img src="assets/Unfairprice.jpg" alt="Project 4">
+        </div>
+        <h3>Unfairprice</h3>
+        <div class="project-type-badges">
+          <span class="badge type-badge">Frontend Dev</span>
+          <span class="badge type-badge">Devops</span>
+        </div>
+        <div class="modal-description">
+          <p>UnfairPrice is an e-commerce web application offering a complete buying and selling experience, with robust DevOps practices. As a frontend developer, I designed and implemented the frontend using VueJS, integrating seamlessly with backend microservices via RESTful APIs. Additionally, I developed a full CI/CD pipeline and deployed the application using Docker and Kubernetes.</p>
+        </div>
+        <div class="badges">
+          <span class="badge">VueJS</span>
+          <span class="badge">Javascript</span>
+          <span class="badge">Docker</span>
+          <span class="badge">Kubernetes</span>
+        </div>
+      </div>
+    </div>
+  
+  </section>  
+
 
 <!-- MY SKILLS SECTION -->
 <section id="skills">
@@ -171,7 +304,7 @@
       <ul class="awards-list">
         <li>Dean’s List AY2024-2025</li>
         <li>SMU Aspirations Scholarship 2021 - 2025</li>
-        <li>Ellipsis Tech Series 2024 Most Creative Award</li>
+        <li>Ellipsis Tech Series Hackathon 2024 Most Creative Award</li>
       </ul>
     </div>
   </section>
@@ -205,5 +338,6 @@
     <p>&copy; 2025 Jun Hui</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
